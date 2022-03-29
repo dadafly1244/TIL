@@ -20,18 +20,20 @@ $ git commit
 $ git branch -M main 
 $ git push -u origin main
 
-
-
+```
 
 
 ## git clone
 
-git clone {깃 주소}
+```shell
+$ git clone {깃 주소}
 
-git add {파일이름}
-git commit 
+$ git add {파일이름}
+$ git commit 
 
-git push origin main
+$ git push origin main
 
-git clone이 설정이 쉬움!! clone을 더 많이 사용하자!! 
+```
+
+* git clone이 설정이 쉬움!! clone을 더 많이 사용하자!! 
 
