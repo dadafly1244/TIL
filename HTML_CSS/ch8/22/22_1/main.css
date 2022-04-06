@@ -1,0 +1,17 @@
+body{
+  padding:100px;
+}
+
+.container{
+  width: 100px;
+  height:100px;
+  background-color:royalblue;
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* 45도 기울이고 1.3배 키우기 */
+  transform: rotate(45deg) scale(1.3);
+}

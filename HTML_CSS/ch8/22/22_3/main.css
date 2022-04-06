@@ -1,0 +1,25 @@
+body{
+  padding:100px;
+}
+
+.container{
+  width: 100px;
+  height:100px;
+  background-color:royalblue;
+  /* perspective 속성은 변환 대상의 부모 요소에 부여함 */
+  perspective: 250px;
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotateY(45deg);
+  /* perspective() 함수는 변환 대상의 transform에 앞부분에 명시 */
+  /* transform: perspective(45deg) rotateY(45deg); */
+}

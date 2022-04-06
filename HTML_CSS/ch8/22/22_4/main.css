@@ -1,0 +1,30 @@
+body{
+  padding:100px;
+}
+
+.container{
+  width: 100px;
+  height:100px;
+  background-color:royalblue;
+  /* perspective 속성은 변환 대상의 부모 요소에 부여함 */
+  perspective: 250px;
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 속성의 뒷면이 출력되면 안보여줌  */
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+
+  /* 다시 앞면으로 출력하면 보임! */
+  /* transform: rotateX(0deg);
+  backface-visibility: hidden;
+   */
+}
