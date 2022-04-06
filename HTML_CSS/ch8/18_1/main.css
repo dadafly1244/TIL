@@ -1,0 +1,37 @@
+/* 플렉스(정렬) */
+/* flex-wrap: wrap;실습 */
+/* 요소가 찌그러짐 */
+
+/* .container{
+  width: 400px;
+  height: 200px;
+  background-color: royalblue;
+  블록 요소와 같이 Flex Container 정의
+  display: flex;
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+} */
+
+
+.container{
+  width: 250px;
+  background-color: royalblue;
+  /* 블록 요소와 같이 Flex Container 정의 */
+  display: flex;
+  flex-wrap: wrap;
+  
+ 
+
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+}

@@ -1,0 +1,19 @@
+
+/* 요소의 display가 변경됨
+position 속성의 값으로 absolute, fixed가 지정된 요소는, 
+display 속성이 block으로 변경됨 */
+
+/* CSS background 와 background-color의 차이
+https://seeminglyjs.tistory.com/286 */
+
+span{
+  /* 원래는 inline요소라서 가로세로값을 가질 수없음 */
+  width: 100px;
+  height: 100px;
+  background: orange;
+  font-size: 40px;
+  /* relative는 display: block;으로 변경안됨 */
+  /* position: relative; */
+  /* display 속성이 block으로 변경됨 */
+  position: absolute;
+}

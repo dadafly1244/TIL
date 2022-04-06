@@ -1,0 +1,33 @@
+/* 위치상의 부로를 찾아가는 position:absolute; 실습  현재는 wrap */
+.wrap{
+  width: 400px;
+  height: 300px;
+  background-color: tomato;
+  position: relative;
+}
+.container{
+  width: 300px;
+  background-color: royalblue;
+
+}
+.container .item{
+  border: 4px dashed red;
+  background-color: orange;
+}
+.container .item:nth-child(1){
+  width: 100px;
+  height: 100px;
+}
+.container .item:nth-child(2){
+  width: 140px;
+  height: 70px;
+  /* 위치상의 부모요소를 기준으로 배치되기 떄문에 사용할 때 기준이 될 부모요소에 position: relative;가 선언되어져 있는지 체크해야함 */
+  position:absolute;
+  bottom: 30px;
+  right: 30px;
+
+}
+.container .item:nth-child(3){
+  width: 70px;
+  height: 120px;
+}

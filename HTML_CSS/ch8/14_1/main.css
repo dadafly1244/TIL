@@ -1,0 +1,27 @@
+div{
+  width: 200px;
+  height: 200px;
+  /* 색상의 기본값은 transparet로 투명임!! */
+  background-color: orange;
+  /* 요소의 배경으로 이미지 넣음 : background-image: url("경로"); */
+  background-image: url("https://heropy.blog/css/images/logo.png");
+  /* 배경으로 넣은 이미지 크기 조정 :크기가 작다면 바둑판식 배열로 반복출력됨 */
+  background-size: 70px;
+  /* background-size:cover; 더 넓은 너비에 맞춰짐 */
+  /* background-size: contain; 더 짧은 너비에 맞춰짐 */
+
+
+  /*요소의 배경 이미지 반복, 바둑판 식으로 이미지를 반복하지 않는다는 설정 */
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-y; */
+  /* background-repeat: repeat-x; */
+
+  /* 이미지의 위치 조정. 중앙으로 */
+  /* 방향 : top botton left right 
+  단위 : px, em, rem */
+  background-position: center;
+  /* background-position: top right; */
+  /* background-position: 100px 30px; */
+
+ 
+}

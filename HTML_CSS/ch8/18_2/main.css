@@ -1,0 +1,22 @@
+/* 플렉스(정렬) */
+.container{
+  width: 400px;
+  height: 300px;
+  background-color: royalblue;
+  display: flex;
+  /* 끝점으로 이동하면서 오른쪽 정렬이됨 */
+  /* justify-content: flex-end;  */
+  /* 수평 가운데 정렬됨 */
+  justify-content: center; 
+  /* 수직 끝에 정렬 */
+  /* align-items: flex-end; */
+  align-items: center;
+
+}
+
+.container .item{
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+}

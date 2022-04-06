@@ -1,0 +1,6 @@
+p{
+  font-size: 24px;
+  /* 문자 첫 출의 들여쓰기 */
+  /* text-indent: 기본값은 0, 음수를 넣으면 내어쓰기 가능  */
+  text-indent: 50px;
+}
