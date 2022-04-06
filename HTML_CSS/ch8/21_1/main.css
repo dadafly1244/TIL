@@ -1,0 +1,19 @@
+div{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* 마우스를 올리면 */
+div:hover{
+  width: 300px;
+  background-color: royalblue;
+  /* 전환 */
+  transition: 1s;
+}
+
+/* 마우스로 클릭 */
+div:active{
+  width: 300px;
+  background-color: green;
+}

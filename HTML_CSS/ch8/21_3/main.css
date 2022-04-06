@@ -1,0 +1,21 @@
+div{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* 마우스를 올리면 */
+div:hover{
+  width: 300px;
+  background-color: royalblue;
+  
+   /* 전환효과가 처리되는 지속시간1초!  0.5동안 대기 하고 바뀜  */
+   transition: 1s .5s;
+}
+
+/* 마우스로 클릭 */
+div:active{
+  width: 300px;
+  background-color: green;
+}
+

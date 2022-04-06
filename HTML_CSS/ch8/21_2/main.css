@@ -1,0 +1,21 @@
+div{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* 마우스를 올리면 */
+div:hover{
+  width: 300px;
+  background-color: royalblue;
+   /* 특정 속성에 전환효과 주고 싶은경우 */
+   transition: 
+    width 0.5s,
+    background-color 2S;
+}
+
+/* 마우스로 클릭 */
+div:active{
+  width: 300px;
+  background-color: green;
+}
