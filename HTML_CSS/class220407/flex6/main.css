@@ -1,0 +1,22 @@
+.container {
+  height: 400px;
+  margin : 30px;
+  border: 2px solid red;
+  display:flex;
+  
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  font-size: 40px;
+ 
+  /* 증가너비비율 원래는 안늘어나는데 1을하면 늘어남 기본너비를 제외하고 */
+  flex-grow: 1;
+  /* 기본 너비를 없애줘서 flex-grow가 지정한 비율로 지정됨 */
+  flex-basis : 0;
+}
+.item:nth-child(2){
+  flex-grow:2;
+}

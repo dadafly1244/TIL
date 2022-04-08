@@ -1,0 +1,43 @@
+/*position : sticky */
+/* 
+-가장 가까운 조상 스크롤 박스에 달라 붙음
+-가장 가까운 블록 조상(보통 부모) 요소 범위 에서만 움직임 
+
+스크롤이 되고 있는 그 박스!! 통상적으로 뷰포트 
+어느순간 같이 딸려 올라가는 것은 통상적으로 부모 요소 범위에서만 붙어서 움직일 수 있음. 
+만약 부모요소가 블록요소가 아니면 조상요소로 올라감
+*/
+body{
+  width: 4000px;
+  height: 9000px;
+}
+.grand {
+  width: 400px;
+  height: 300px;
+  background-color: green;
+ 
+  
+}
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: orange;
+  
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border:  2px solid;
+}
+
+.child.c1 {
+  position : sticky;
+  top:0;
+  left:0
+
+}
+.child.c2{
+ 
+}

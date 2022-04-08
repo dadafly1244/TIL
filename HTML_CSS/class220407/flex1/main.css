@@ -1,0 +1,16 @@
+.container {
+  margin : 30px;
+  border: 2px solid red;
+  display:flex;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  font-size: 40px
+}

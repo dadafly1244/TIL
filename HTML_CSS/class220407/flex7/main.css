@@ -1,0 +1,21 @@
+body{
+  padding:20px;
+}
+
+
+.search{
+  /* border: 2px solid red; */
+  display: flex;
+}
+
+.search input {
+  height: 50px;
+  flex-grow:1;
+}
+
+.search .search-btn{
+
+  height: 50px;
+  margin-left: 10px;
+  /* flex-shrink: 0; */
+}
