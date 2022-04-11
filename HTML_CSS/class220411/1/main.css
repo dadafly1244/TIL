@@ -1,0 +1,33 @@
+img {
+  display: block;
+}
+.container {
+  width: min-content;
+  background-color: royalblue;
+  /* 변환효과의 부모요소에 원근법 설정 */
+  perspective: 600px;
+  perspective-origin: 50% 0%;
+
+}
+/* 부모 요소랑 자식 요소에 둘 다 3d효과가 있으면 날라감,...!!!
+그래서 자식요소에 transform-style: preserve-3d; 를 써야함!!
+강사님 예제!! https://codepen.io/heropark/pen/RZxEXe */
+
+.container img{
+  transition-duration: 1s;
+  
+  /* transform-origin: 100% 0%; */
+  /* transition-property: all; */
+  /* transition-duration: 0s; */
+  /* https://greensock.com/docs/v2/Easing */
+  /* https://www.joshwcomeau.com/animation/css-transitions/ */
+  /* transition-timing-function: ease; */
+  /* transition-delay: 1s; */
+  /* 전환효과는 가상클레스에는 부여하지 말기!! 오리지널 요소 자체에 부여하기!! */
+  /* transition-duration : 1s; */
+}
+.container:hover img{
+  /* 변환효과 */
+  /* perspective() 함수는 가장 앞에 넣어야 동작함!!! */
+  transform: rotateY(45deg)  ;
+}

@@ -1,0 +1,51 @@
+img {
+  display: block;
+}
+
+.container {
+  width: min-content;
+  background-color: royalblue;
+  perspective: 600px;
+}
+
+.container img{
+  transition-duration: 1s;
+
+  /* Animaation */
+  /* animation-name: none;
+  animation-duration: 0s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+  animation-fill-mode:none;
+  animation-play-state:running; */
+  /* animation : ; */
+
+  animation-name: rolling;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 2;
+  animation-direction:alternate-reverse;
+  /*nomal reverse, alternate 왕복운동, alternate-reverse*/
+  animation-fill-mode:none;
+  /* 전후상태 none, both */
+  animation-play-state:running;
+  /* running , paused */
+  /* animation : rolling 1s linear 2 alternate-reverse; */
+}
+
+.container:hover img{
+  transform : rotateY(45deg);
+  animation-play-state: paused;
+}
+
+@keyframes rolling {
+  0% {
+    transform : translateX(0);
+  }
+  100% {
+    transform : translateX(100px);
+  }
+}
