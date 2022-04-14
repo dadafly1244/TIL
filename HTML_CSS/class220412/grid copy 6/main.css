@@ -1,0 +1,23 @@
+.container {
+  border: 4px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  /* grid-auto-flow: row dense; 중에서 row를 생략할 수 있음  */
+  grid-auto-flow: dense; 
+  gap: 10px 20px;
+
+}
+
+.item {
+  border: 1px solid;
+
+}
+
+.item:nth-child(2) {
+  grid-column: span 3;
+}
+.item:nth-child(4) {
+  grid-column: span 2;
+}
+

@@ -1,0 +1,21 @@
+img {
+  display: block;
+}
+
+.container {
+  border: 4px solid;
+  width: min-content;
+  /* filter: blur(10px); */
+  /* filter: grayscale(50%); */
+  /* filter: brightness(2); */
+  /* filter: contrast(200%); */
+  /* filter: drop-shadow(10px 20px 10px black); */
+  /* filter:drop-shadow(10px 20px 10px rgba(0,0,0,.5)) */
+  /* filter: hue-rotate(30deg); */
+  /* filter: invert(25%); */
+  /* filter:saturate(40%) */
+  /* filter: sepia(70%); */
+  
+}
+
+

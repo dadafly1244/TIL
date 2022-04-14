@@ -1,0 +1,26 @@
+.container {
+  border: 4px solid red;
+  display: grid;
+ 
+    grid-template-columns: repeat(3, 1fr);
+    /* row는 템플릿을 별로 안쓰고 auto로 쓰는 경우가 많음 */
+    grid-auto-rows: 100px;
+    gap: 10px 20px;
+
+}
+/* flex는 1차원 gird는 2차원 */
+
+.item {
+  border: 1px solid;
+
+}
+
+.item:nth-child(2) {
+  /* span 확장을 해서 2개의 cell로 확장! column 방향으로 */
+  grid-column: span 2;
+  grid-row : span 2;
+}
+
+.item:nth-child(3) {
+  grid-row: span 10;
+}

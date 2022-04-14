@@ -1,0 +1,24 @@
+.container {
+  border: 4px solid red;
+  display: grid;
+  /* 열 */
+  /* grid-template-columns: 100px 200px 100px; */
+
+  /* 행 */
+  /* grid-template-rows: 100px 100px 200px; */
+
+    /* 비율 fr : fraction */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 200px; */
+
+    /* 열의 개수를 한번에 제어하기 위해서 repeat함수를 사용함. repeat(몇번, 단위) */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2,100px) 200px; */
+    grid-template-rows: repeat(3,100px);
+}
+/* flex는 1차원 gird는 2차원 */
+
+.container .item {
+  border: 1px solid;
+
+}
