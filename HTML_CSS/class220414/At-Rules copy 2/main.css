@@ -1,0 +1,15 @@
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* @media 타입 and (기능) {} */
+
+/* 가로가 더 길때 */
+@media (orientation : landscape){
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+}

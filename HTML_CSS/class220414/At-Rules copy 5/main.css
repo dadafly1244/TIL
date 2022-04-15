@@ -1,0 +1,15 @@
+.group1 {
+  --primary: orange;
+}
+/* css에서 변수 선언 키워드 --  */
+/* 변수는 html 구조 안에서만 동작, 선택한 그 선택자 안에서만 유효범위를 가짐 , 유효범위는 요소에 종속 */
+/* 그래서 html == :root  ==> html(태그 선택자) == :root(가상클래스선택자 명시도점수10점)를 더 많이 사용함. */
+.box{
+  width: 100px;
+  height: 200px;
+  background-color: var(--primary);
+  margin:20px;
+  border: 4px solid;
+  
+}
+/* css 변수는 var()함수와 같이 써야함 */

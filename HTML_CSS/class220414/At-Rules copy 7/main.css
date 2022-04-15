@@ -1,0 +1,15 @@
+.group1 {
+  --primary: orange;
+  --danger: green;
+}
+
+/* var(--danger, red); --danger이 있으면 쓰고 없으면 red써라! */
+
+.box{
+  width: 100px;
+  height: 200px;
+  background-color: var(--danger, red);
+  margin:20px;
+  border: 4px solid;
+  
+}

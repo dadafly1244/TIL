@@ -1,0 +1,47 @@
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* @media 타입 and (기능) {} */
+/* @media 타입 and (기능) and (기능 ) {} */
+/* @media screen and (max-width: 600px) {
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+} */
+
+/* max-width: 600px뒤에 ;있으면 안됨!! 600px 이하  */
+/* @media all이 기본값임 */
+/* @media (max-width: 600px) 이렇게 해두면 된다!  */
+/* @media print도 가능 print 하는 경우.. tv도 있다,..!!1 ㅋㅋ  */
+/* 
+@media (max-width: 600px) {
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+} */
+
+/* @media (max-width: 600px) and (min-width : 500px){
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+} */
+
+@media (max-width: 600px) and (min-width : 500px){
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+}
+
+@media not all and (max-width: 600px) and (min-width : 800px){
+  .box{
+    width: 300px;
+    background-color: royalblue;
+  }
+}
