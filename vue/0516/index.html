@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script type="module" defer src="./main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input v-model="title" @keydown.enter="searchMovies(true)"/>
+    <button @click="searchMovies(true)">search</button>
+    <ul>
+      <li v-for="movie in customMovies" :key="movie.id">
+        <img :src="movie.poster" alt="" height="40">
+        {{movie.title}}
+      </li>
+    </ul>
+    <button v-if="movies.length" @click="searchMovies()">More...</button>
+    <!-- o은 falsy라서 0이면 실행안됨 -->
+    <h1>{{ msg }}</h1>
+    <h2>{{ reverseMsg() }}</h2>
+    
+    <h3>{{ reversedMsg }}</h3>
+    
+    <button @click="reversedMsg = 1234123">set!</button>
+  </div>
+</body>
+</html>
