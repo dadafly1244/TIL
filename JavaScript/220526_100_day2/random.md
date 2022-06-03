@@ -19,5 +19,8 @@ function generateRandomIntegerInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
-
+ generateRandomIntegerInRange(2,10)
 > https://www.udacity.com/blog/2021/04/javascript-random-numbers.html
+
+> https://hianna.tistory.com/454
+곱해주는 수에 1 더하면 max 값 포함이고 더해주는 수는 시작하는수...?
