@@ -1,0 +1,21 @@
+{
+  "name": "220621-vue-router-start",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.18.0",
+    "eslint-plugin-vue": "^9.1.1",
+    "sass": "^1.52.3",
+    "vite": "^2.9.9"
+  }
+}
