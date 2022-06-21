@@ -1,0 +1,120 @@
+@import "./mixins";
+@import "./variables";
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: $font-default;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+  padding: 8px 12px;
+
+  &__logo {
+    font-size: $font-medium;
+    color: $text-color;
+    i {
+      color: $accent-color;
+    }
+  }
+  &__menu {
+    display: flex;
+    li {
+      padding: 8px 12px;
+      &:hover {
+        background-color: $accent-color;
+        border-radius: 4px;
+      }
+    }
+  }
+  &__icons {
+    color: $text-color;
+    display: flex;
+    li {
+      padding: 8px 12px;
+    }
+  }
+  &__toggleBtn {
+    display: none;
+    position:absolute;
+    right: 32px;
+    font-size: 24px;
+    color: $accent-color;
+  }
+}
+
+@include tablet {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    &__menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      &.active {
+        display: flex;
+      }
+      li {
+        width: 100%;
+        text-align: center;
+      }
+      
+    }
+    &__icons {
+      display: none;
+      justify-content: center;
+      width: 100%;
+      &.active {
+        display: flex;
+      }
+    }
+    &__toggleBtn { //쩐다!!!!
+      display: block;
+    }
+  }
+}
+
+
+@include mobile {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    &__menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      &.active {
+        display: flex;
+      }
+      li {
+        width: 100%;
+        text-align: center;
+        font-size: $font-small;
+      }
+      
+    }
+    &__icons {
+      display: none;
+      justify-content: center;
+      width: 100%;
+      &.active {
+        display: flex;
+      }
+    }
+    &__toggleBtn { //쩐다!!!!
+      display: block;
+    }
+  }
+}
