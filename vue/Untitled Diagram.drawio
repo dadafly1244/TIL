@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-22T06:56:30.298Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="vcwEF7arGwPeCLM4yvWA" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-22T07:10:48.831Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="wQojlhuYJvLeLki3r7F4" version="20.0.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1394" dy="1583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -239,7 +239,7 @@
         <mxCell id="huPe4Oib1tJphUTkqCRO-101" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="huPe4Oib1tJphUTkqCRO-96" target="huPe4Oib1tJphUTkqCRO-100">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="huPe4Oib1tJphUTkqCRO-96" value="제품 전체&amp;nbsp;&lt;br&gt;거래(구매) 내역" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="huPe4Oib1tJphUTkqCRO-96" value="제품 전체&amp;nbsp;&lt;br&gt;거래(구매) 내역 &lt;br&gt;페이지" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="270" y="230" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="huPe4Oib1tJphUTkqCRO-105" value="yes" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="huPe4Oib1tJphUTkqCRO-100" target="huPe4Oib1tJphUTkqCRO-104">
@@ -251,7 +251,7 @@
         <mxCell id="huPe4Oib1tJphUTkqCRO-100" value="로그인 된 상태인가?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="480" y="225" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="huPe4Oib1tJphUTkqCRO-104" value="" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="huPe4Oib1tJphUTkqCRO-104" value="젠체 구매 내역&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="725" y="235" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="huPe4Oib1tJphUTkqCRO-106" value="로그인 페이지" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
