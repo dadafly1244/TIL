@@ -1,0 +1,11 @@
+#flyda{
+  color: blue;
+}
+
+.flyda{
+  color:green !important;
+}
+
+div.flyda{
+  color:yellow;
+}

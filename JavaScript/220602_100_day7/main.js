@@ -19,6 +19,7 @@ const copyText = (text) => {
 
 
 copyBtnEl.addEventListener("click", (e) => {
+  console.log(e)
   e.preventDefault()// 왜인지는 모르겠지만 새로고침이 자꾸 일어나는거 같아서 일단 넣으니까 잘 됨..!! 위에 코드랑 비교해보고 싶다아아!!
   console.log(couponStringEl.value)
 

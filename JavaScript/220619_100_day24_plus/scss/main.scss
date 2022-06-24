@@ -5,11 +5,18 @@ img {
   display: block;
 }
 a {
-  // display: block;
   text-decoration: none; 
 }
+.inner {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
 
 body {
+  height: 2000px;
   font-size: $font-default;
   main {
     color: red;
@@ -17,8 +24,9 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  background-color: aquamarine;
   .inner {
     box-sizing: border-box;
     border: 2px solid red;
@@ -34,6 +42,7 @@ header {
       width: 300px;
     }
     .logo {
+      margin: auto;
       img{
         height: 30px;
         margin: 10px 20px;
@@ -45,16 +54,84 @@ header {
     }
     .nav {
       display: flex;
-      justify-content: center;
-      .nav-item {
 
-        border: 1px solid goldenrod;
-        margin: 10px;
-        flex-grow: 1;
-        &:last-child {
-          margin-right : 30px
+      @include desktop {
+        &-menu-icon{
+          display: none;
+        }
+        &-items {
+          display: flex;
+          justify-content: center;
+          .nav-item {
+            border: 1px solid goldenrod;
+            margin: 10px;
+            flex-grow: 1;
+            &:last-child {
+              margin-right : 30px
+            }
+          }
         }
       }
+      @include tablet {
+        &-menu-icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px;
+        }
+        &-items {
+          display: none;
+          justify-content: center;
+          flex-direction: column;
+          .nav-item {
+            border: 1px solid goldenrod;
+            margin: 10px;
+            flex-grow: 1;
+            &:last-child {
+              margin-right : 30px
+            }
+          }
+        }
+        &-close-icon {
+          display: none;
+          height: 20px;
+          width: 20px;
+
+        }
+      }
+      @include mobile {
+        &-menu-icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px;
+        }
+        &-items {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          display: none;
+          .nav-item {
+            border: 1px solid goldenrod;
+            margin: 10px;
+            flex-grow: 1;
+            &:last-child {
+              margin-right : 30px
+            }
+          }
+        }
+        &-close-icon {
+          display: none;
+          height: 20px;
+          width: 20px;
+
+        }
+      }
+      
+
+
+
+      
     }
 
 
@@ -63,20 +140,3 @@ header {
 }
 
 
-@include mobile {
-  .img-card {
-    width: 100px;
-  }
-}
-
-@include tablet {
-  .img-card {
-    width: 200px;
-  }
-}
-
-@include desktop {
-  .img-card {
-    width: 300px;
-  }
-}

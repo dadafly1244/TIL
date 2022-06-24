@@ -1,0 +1,98 @@
+@import "./mixins";
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: $font-default;
+}
+
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing;
+  background-color: $black-color;
+  color: $white-color;
+  .logo{
+    font-size: $font-large;
+    i {
+      color: $red-color
+    }
+  }
+}
+
+/* Video player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: $black-color;
+  video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+  }
+}
+
+/* Video info */
+.infoAndUpNext .info {
+  padding: $spacing;
+}
+
+
+/* Metadata */
+
+.info {
+  .metadata {
+    .hashtags {
+      display: flex;
+      font-size: $font-small;
+      color: $blue-color;
+      li {
+        margin-right: $spacing;
+      }
+    }
+    .titleAndButton {
+      display: flex;
+      .title {
+        font-size: $font-medium;
+        margin-right: $spacing;
+        &.clamp {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+      }
+      .moreBtn {
+        height: 100%;
+        transition: transform 300ms ease-in-out;
+        &.clicked {
+          transform: rotate(180deg);
+        }
+      }
+      
+    }
+    .views {
+      font-size: $font-small;
+      color: $grey-dark-color;
+    }
+  }
+}
+
