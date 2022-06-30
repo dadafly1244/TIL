@@ -20,8 +20,11 @@
   </div>
 </template>
 
-<script setup lang="ts">
-  defineProps({ //명시적으로 vue에서 가지고 오는 것이었는데, 전역으로 변경되어서 그냥 쓸수 있음
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  props: {
     loading: {
       type: Boolean,
       default: true
@@ -50,8 +53,8 @@
       type: Boolean,
       default: false
     }
-  })
-  //defineEmits()도 전역!!
+  }
+})
 </script>
 
 <style lang="scss" scoped>
