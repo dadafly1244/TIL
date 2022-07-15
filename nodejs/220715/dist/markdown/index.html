@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkDown 사용법 총정리</title>
+  <style>
+    code {
+      background-color: #f8f8f8;
+      color: #e96900;
+      padding: 3px 5px;
+      margin: 0 2px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    pre code {
+      white-space: inherit;
+    }
+  </style>
+</head>
+<body><p>마크다운(MarkDown)에 대해서 알고 계신가요?
+파일 확장자가 <code>.md</code>로 된 파일을 보셨나요?
+웹 개발을 하면서 아마 <code>README.md</code>라는 이름의 파일을 한 번은 보셨을텐데, 이 파일이 마크다운 문법으로 작성된 파일 입니다.
+사용법이 매우 쉽고, 빠르게 문서를 정리할 수 있습니다.
+물론 모든 HTML 마크업을 대신할 수 없기 때문에 지나친 의존보다는 쉽고 빠르게 작성하는 용도로 사용하세요.
+마크다운과 비슷한 형태로 문법이 좀 더 복잡하지만 확장자가 <code>.adoc</code>인 <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#tables">AsciiDoc</a> 문법도 있습니다. 좀 더 다양한 형태의 문서를 만들 수 있지만, 문법이 좀 더 복잡하고 지원 플랫폼이 적습니다.
+우선 문법이 쉽고 다양한 플랫폼을 지원하는 마크다운 문법을 배우세요.
+30분이면 충분합니다.</p>
+<!-- toc -->
+<h1 id="마크다운markdown에-대해서">마크다운(MarkDown)에 대해서</h1>
+<h2 id="마크다운의-장점">마크다운의 장점</h2>
+<ol>
+<li>문법이 쉽다.</li>
+<li>관리가 쉽다.</li>
+<li>지원 가능한 플랫폼과 프로그램이 다양하다.</li>
+</ol>
+<h2 id="마크다운의-단점">마크다운의 단점</h2>
+<ol>
+<li>표준이 없어 사용자마다 문법이 상이할 수 있다.</li>
+<li>모든 HTML 마크업을 대신하지 못한다.</li>
+</ol>
+<h2 id="마크다운의-사용">마크다운의 사용</h2>
+<p>메모장부터 전용 에디터까지 많은 곳에서 활용할 수 있습니다.
+문법이 쉽기 때문에 꼭 전용 에디터를 사용할 필요는 없습니다만, 마크다운 코드의 하이라이트 효과를 원한다면 전용 에디터가 좋은 선택이 될 것 같네요.
+저는 평소 <a href="https://atom.io">Atom</a>을 사용하고 있습니다.
+혹은 마크다운 문법을 지원하는 모든 곳에서 사용할 수 있으며, 일반 블로그나 워드프레스 외 <a href="https://slack.com/">Slack</a>이나 <a href="https://trello.com/">Trello</a> 같은 서비스에서 메세지를 작성하듯 사용할 수도 있습니다.
+화면에 표현되는 스타일(CSS)은 설정에 따라 달라집니다.
+HTML과 마찬가지로 눈에 보이는 스타일은 무시하고 각 문법의 의미로 사용하세요.</p>
+<h1 id="마크다운-문법syntax">마크다운 문법(syntax)</h1>
+<h2 id="제목header">제목(Header)</h2>
+<p><code>&lt;h1&gt;</code>부터 <code>&lt;h6&gt;</code>까지 제목을 표현할 수 있습니다.</p>
+<pre><code class="language-markdown"># 제목 1
+## 제목 2
+### 제목 3
+#### 제목 4
+##### 제목 5
+###### 제목 6
+</code></pre>
+<p>제목1(h1)과 제목2(h2)는 다음과 같이 표현할 수 있습니다.</p>
+<pre><code class="language-markdown">제목 1
+======
+제목 2
+------
+</code></pre>
+<h2 id="강조emphasis">강조(Emphasis)</h2>
+<p>각각 <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;del&gt;</code> 태그로 변환됩니다.
+밑줄을 입력하고 싶다면 <code>&lt;u&gt;&lt;/u&gt;</code> 태그를 사용하세요.</p>
+<pre><code class="language-markdown">이텔릭체는 *별표(asterisks)* 혹은 _언더바(underscore)_를 사용하세요.
+두껍게는 **별표(asterisks)** 혹은 __언더바(underscore)__를 사용하세요.
+**_이텔릭체_와 두껍게**를 같이 사용할 수 있습니다.
+취소선은 ~~물결표시(tilde)~~를 사용하세요.
+&lt;u&gt;밑줄&lt;/u&gt;은 `&lt;u&gt;&lt;/u&gt;`를 사용하세요.
+</code></pre>
+<p>이텔릭체는 <em>별표(asterisks)</em> 혹은 _언더바(underscore)_를 사용하세요.
+두껍게는 <strong>별표(asterisks)</strong> 혹은 __언더바(underscore)__를 사용하세요.
+<strong>_이텔릭체_와 두껍게</strong>를 같이 사용할 수 있습니다.
+취소선은 <del>물결표시(tilde)</del>를 사용하세요.
+<u>밑줄</u>은 <code>&lt;u&gt;&lt;/u&gt;</code>를 사용하세요.</p>
+<h2 id="목록list">목록(List)</h2>
+<p><code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code> 목록 태그로 변환됩니다.</p>
+<pre><code class="language-markdown">1. 순서가 필요한 목록
+1. 순서가 필요한 목록
+  - 순서가 필요하지 않은 목록(서브) 
+  - 순서가 필요하지 않은 목록(서브) 
+1. 순서가 필요한 목록
+  1. 순서가 필요한 목록(서브)
+  1. 순서가 필요한 목록(서브)
+1. 순서가 필요한 목록
+- 순서가 필요하지 않은 목록에 사용 가능한 기호
+  - 대쉬(hyphen)
+  * 별표(asterisks)
+  + 더하기(plus sign)
+</code></pre>
+<ol>
+<li>순서가 필요한 목록</li>
+<li>순서가 필요한 목록</li>
+</ol>
+<ul>
+<li>순서가 필요하지 않은 목록(서브) </li>
+<li>순서가 필요하지 않은 목록(서브)</li>
+</ul>
+<ol>
+<li>순서가 필요한 목록</li>
+<li>순서가 필요한 목록(서브)</li>
+<li>순서가 필요한 목록(서브)</li>
+<li>순서가 필요한 목록</li>
+</ol>
+<ul>
+<li>순서가 필요하지 않은 목록에 사용 가능한 기호<ul>
+<li>대쉬(hyphen)</li>
+</ul>
+<ul>
+<li>별표(asterisks)</li>
+</ul>
+<ul>
+<li>더하기(plus sign)</li>
+</ul>
+</li>
+</ul>
+<h2 id="링크links">링크(Links)</h2>
+<p><code>&lt;a&gt;</code>로 변환됩니다.</p>
+<pre><code class="language-markdown">[GOOGLE](https://google.com)
+[NAVER](https://naver.com "링크 설명(title)을 작성하세요.")
+[상대적 참조](../users/login)
+[Dribbble][Dribbble link]
+[GitHub][1]
+문서 안에서 [참조 링크]를 그대로 사용할 수도 있습니다.
+다음과 같이 문서 내 일반 URL이나 꺾쇠 괄호(`&lt; &gt;`, Angle Brackets)안의 URL은 자동으로 링크를 사용합니다.
+구글 홈페이지: https://google.com
+네이버 홈페이지: &lt;https://naver.com&gt;
+[Dribbble link]: https://dribbble.com
+[1]: https://github.com
+[참조 링크]: https://naver.com "네이버로 이동합니다!"
+</code></pre>
+<p><a href="https://google.com">GOOGLE</a>
+<a href="https://naver.com" title="링크 설명(title)을 작성하세요.">NAVER</a>
+<a href="../users/login">상대적 참조</a>
+[Dribbble][Dribbble link]
+[GitHub][1]
+문서 안에서 [참조 링크]를 그대로 사용할 수도 있습니다.
+다음과 같이 문서 내 일반 URL이나 꺾쇠 괄호(<code>&lt; &gt;</code>, Angle Brackets)안의 URL은 자동으로 링크를 사용합니다.
+구글 홈페이지: <a href="https://google.com">https://google.com</a>
+네이버 홈페이지: <a href="https://naver.com">https://naver.com</a>
+[Dribbble link]: <a href="https://dribbble.com">https://dribbble.com</a>
+[1]: <a href="https://github.com">https://github.com</a>
+[참조 링크]: <a href="https://naver.com">https://naver.com</a> "네이버로 이동합니다!"</p>
+<h2 id="이미지images">이미지(Images)</h2>
+<p><code>&lt;img&gt;</code>로 변환됩니다.
+링크과 비슷하지만 앞에 <code>!</code>가 붙습니다.</p>
+<pre><code class="language-markdown">![대체 텍스트(alternative text)를 입력하세요!](http://www.gstatic.com/webp/gallery/5.jpg "링크 설명(title)을 작성하세요.")
+![Kayak][logo]
+[logo]: http://www.gstatic.com/webp/gallery/2.jpg "To go kayaking."
+</code></pre>
+<p><img src="http://www.gstatic.com/webp/gallery/5.jpg" alt="대체 텍스트(alternative text)를 입력하세요!" title="링크 설명(title)을 작성하세요.">
+![Kayak][logo]
+[logo]: <a href="http://www.gstatic.com/webp/gallery/2.jpg">http://www.gstatic.com/webp/gallery/2.jpg</a> "To go kayaking."</p>
+<h3 id="이미지에-링크">이미지에 링크</h3>
+<p>마크다운 이미지 코드를 링크 코드로 묶어 줍니다.</p>
+<pre><code class="language-markdown">[![Vue](/images/vue.png)](https://kr.vuejs.org/)
+</code></pre>
+<p><a href="https://kr.vuejs.org/"><img src="/images/vue.png" alt="Vue"></a></p>
+<h2 id="코드code-강조">코드(Code) 강조</h2>
+<p><code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code>로 변환됩니다.
+숫자 1번 키 왼쪽에 있는 <code>`</code>(Grave)를 입력하세요</p>
+<h3 id="인라인inline-코드-강조">인라인(inline) 코드 강조</h3>
+<pre><code class="language-markdown">`background`혹은 `background-image` 속성으로 요소에 배경 이미지를 삽입할 수 있습니다.
+</code></pre>
+<p><code>background</code>혹은 <code>background-image</code> 속성으로 요소에 배경 이미지를 삽입할 수 있습니다.</p>
+<h3 id="블록block-코드-강조">블록(block) 코드 강조</h3>
+<p><code>`</code>를 3번 이상 입력하고 코드 종류도 적습니다.</p>
+<pre><code class="markdown">
+```html
+&lt;a href="https://www.google.co.kr/" target="_blank"&gt;GOOGLE&lt;/a&gt;
+```
+```css
+.list &gt; li {
+  position: absolute;
+  top: 40px;
+}
+```
+```javascript
+function func() {
+  var a = 'AAA';
+  return a;
+}
+```
+```bash
+$ vim ./~zshrc
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
+ 
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+</code>
+</pre>
+<pre><code class="language-html">&lt;a href="https://www.google.co.kr/" target="_blank"&gt;GOOGLE&lt;/a&gt;
+</code></pre>
+<pre><code class="language-css">.list &gt; li {
+  position: absolute;
+  top: 40px;
+}
+</code></pre>
+<pre><code class="language-javascript">function func() {
+  var a = 'AAA';
+  return a;
+}
+</code></pre>
+<pre><code class="language-bash">$ vim ./~zshrc
+</code></pre>
+<pre><code class="language-python">s = "Python syntax highlighting"
+print s
+</code></pre>
+<pre><code>No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre>
+<h2 id="표table">표(Table)</h2>
+<p><code>&lt;table&gt;</code> 태그로 변환됩니다.
+헤더 셀을 구분할 때 3개 이상의 <code>-</code>(hyphen/dash) 기호가 필요합니다.
+헤더 셀을 구분하면서 <code>:</code>(Colons) 기호로 셀(열/칸) 안에 내용을 정렬할 수 있습니다.
+가장 좌측과 가장 우측에 있는 <code>|</code>(vertical bar) 기호는 생략 가능합니다.</p>
+<pre><code class="language-markdown">| 값 | 의미 | 기본값 |
+|---|:---:|---:|
+| `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
+| `relative` | 요소 자신을 기준으로 배치 |  |
+| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
+| `fixed` | 브라우저 창을 기준으로 배치 |  |
+값 | 의미 | 기본값
+---|:---:|---:
+`static` | 유형(기준) 없음 / 배치 불가능 | `static`
+`relative` | 요소 **자신**을 기준으로 배치 |
+`absolute` | 위치 상 **_부모_(조상)요소**를 기준으로 배치 |
+`fixed` | **브라우저 창**을 기준으로 배치 |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th align="center">의미</th>
+<th align="right">기본값</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>static</code></td>
+<td align="center">유형(기준) 없음 / 배치 불가능</td>
+<td align="right"><code>static</code></td>
+</tr>
+<tr>
+<td><code>relative</code></td>
+<td align="center">요소 <strong>자신</strong>을 기준으로 배치</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td><code>absolute</code></td>
+<td align="center">위치 상 <strong><em>부모</em>(조상)요소</strong>를 기준으로 배치</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td align="center"><strong>브라우저 창</strong>을 기준으로 배치</td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+<h2 id="인용문blockquote">인용문(BlockQuote)</h2>
+<p><code>&lt;blockquote&gt;</code> 태그로 변환됩니다.</p>
+<pre><code class="language-markdown">인용문(blockQuote)
+&gt; 남의 말이나 글에서 직접 또는 간접으로 따온 문장.
+&gt; _(네이버 국어 사전)_
+BREAK!
+&gt; 인용문을 작성하세요!
+&gt;&gt; 중첩된 인용문(nested blockquote)을 만들 수 있습니다.
+&gt;&gt;&gt; 중중첩된 인용문 1
+&gt;&gt;&gt; 중중첩된 인용문 2
+&gt;&gt;&gt; 중중첩된 인용문 3
+</code></pre>
+<p>인용문(blockQuote)</p>
+<blockquote>
+<p>남의 말이나 글에서 직접 또는 간접으로 따온 문장.
+<em>(네이버 국어 사전)</em>
+BREAK!
+인용문을 작성하세요!</p>
+<blockquote>
+<p>중첩된 인용문(nested blockquote)을 만들 수 있습니다.</p>
+<blockquote>
+<p>중중첩된 인용문 1
+중중첩된 인용문 2
+중중첩된 인용문 3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="원시-htmlraw-html">원시 HTML(Raw HTML)</h2>
+<p>마크다운 문법이 아닌 원시 HTML 문법을 사용할 수 있습니다.</p>
+<pre><code class="language-markdown">&lt;u&gt;마크다운에서 지원하지 않는 기능&lt;/u&gt;을 사용할 때 유용하며 대부분 잘 동작합니다.
+&lt;img width="150" src="http://www.gstatic.com/webp/gallery/4.jpg" alt="Prunus" title="A Wild Cherry (Prunus avium) in flower"&gt;
+![Prunus](http://www.gstatic.com/webp/gallery/4.jpg)
+</code></pre>
+<p><u>마크다운에서 지원하지 않는 기능</u>을 사용할 때 유용하며 대부분 잘 동작합니다.
+<img width="150" src="http://www.gstatic.com/webp/gallery/4.jpg" alt="Prunus" title="A Wild Cherry (Prunus avium) in flower">
+<img src="http://www.gstatic.com/webp/gallery/4.jpg" alt="Prunus"></p>
+<h2 id="수평선horizontal-rule">수평선(Horizontal Rule)</h2>
+<p>각 기호를 3개 이상 입력하세요.</p>
+<pre><code class="language-markdown">---
+(Hyphens)
+***
+(Asterisks)
+___
+(Underscores)
+</code></pre>
+<hr>
+<p>(Hyphens)</p>
+<hr>
+<p>(Asterisks)</p>
+<hr>
+<p>(Underscores)</p>
+<h2 id="줄바꿈line-breaks">줄바꿈(Line Breaks)</h2>
+<pre><code class="language-markdown">동해물과 백두산이 마르고 닳도록 
+하느님이 보우하사 우리나라 만세   &lt;!--띄어쓰기 2번--&gt;
+무궁화 삼천리 화려 강산&lt;br&gt;
+대한 사람 대한으로 길이 보전하세
+</code></pre>
+<p>동해물과 백두산이 마르고 닳도록
+하느님이 보우하사 우리나라 만세
+무궁화 삼천리 화려 강산
+대한 사람 대한으로 길이 보전하세</p>
+<blockquote>
+<p>일반 줄비꿈이 동작하지 않는 환경(설정 및 버전에 따라)의 경우, '2번의 띄어쓰기'나 <code>&lt;br&gt;</code>를 활용할 수 있습니다.</p>
+</blockquote>
+</body></html>
