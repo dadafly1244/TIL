@@ -1,6 +1,5 @@
 import Todo from './component/Todo'
-import Modal from './component/Modal';
-import Backdrop from './component/Backdrop';
+
 
 function App(){
   return(
@@ -9,8 +8,6 @@ function App(){
       <Todo text='리액트 배우기' />
       <Todo text='뷰 배우기' />
       <Todo text='바닐라 배우기' />
-      <Modal />
-      <Backdrop />
     </div>
   );
 }
