@@ -2,25 +2,29 @@
   <button @click="cardStore.randomCard">
     추첨하기
   </button>
-  {{ cardStore }}
+  <button @click="cardStore.resetLucky">
+    추첨리셋하기
+  </button>
+  <p>card {{ cardStore.card }}</p>
+  
+  <p>lucky{{ cardStore.lucky }}</p>
 </template>
 
 <script>
 import { mapStores } from 'pinia'
 import {useCardStore} from './store/card'
-import cards from './card'
 
 export default {
   data() {
     return{
-      cards
+     
     }
   },
   computed: {
     ...mapStores(useCardStore)
   },
   created() {
-    this.cardStore.getCards(this.cards)
+    this.cardStore.getCards()
   },
   methods: {
 
