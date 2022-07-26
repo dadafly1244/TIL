@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import classes from "./NewMeetupForm.module.css";
 import Card from "../ui/Card";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   // DOM 엘리먼트나 클래스 컴포넌트의 인스턴스에 접근하기 위해 ref 어트리뷰트를 함수 컴포넌트에서 사용하는 것은 됨. 
   //titleInputRef은 ref 어트리뷰트를 통해서 전달되기 위해서 이곳에 정의되어야함 
   const titleInputRef = useRef();
@@ -24,7 +24,7 @@ function NewMeetupForm() {
       address: enteredAddress,
       discription: enteredDiscription
     }
-    console.log(meetupData)
+    props.onAddMeetup(meetupData)
   }
  
   return <Card>
