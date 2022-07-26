@@ -53,4 +53,4 @@ function loading(isLoading) {
   } else {
     loadingEl.style.display = 'block'
   }
-}
+} 
