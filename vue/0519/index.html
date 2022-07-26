@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script type="module" defer src="./main.js"></script>
+  
+</head>
+<body>
+  <div id="app">
+    <input v-model="title" @keydown.enter="addTodo" />
+    <ul>
+      <todo-item 
+        v-for="todo in todos" 
+        :key="todo.id"
+        :todo="todo">
+      </todo-item>
+    </ul>
+  </div> 
+</body>
+</html>

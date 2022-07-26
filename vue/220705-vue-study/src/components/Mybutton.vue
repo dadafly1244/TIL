@@ -1,5 +1,5 @@
 <template>
-  <!-- <button >클릭하기</button> -->
+  <!-- <button  >클릭하기</button> -->
 
   <!-- 2. 이미 class가 있는 경우 병합됨 -->
   <!-- <button class="font">클릭하기</button> -->
@@ -13,7 +13,7 @@
   </div> -->
 
   <!-- 5. js에서 폴스루 속성 접근하기  -->
-  <!-- <button class="font">클릭하기</button> -->
+  <button class="font">클릭하기</button>
 
 </template>
 

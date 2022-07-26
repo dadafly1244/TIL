@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script type="module" defer src="./main.js"></script>
+  <style>
+    .no-img {
+      width: 40px;
+      height: 40px;
+      background-color: lightgray;
+      display: inline-block;
+    }
+    button.active {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <input v-model="title" @keydown.enter="searchMovies(true)" />
+    <!-- 바인드(:)가 붙어 있으면 객체 데이터임 -->
+    <button @click = "heropy"> 
+      Search!
+    </button>
+    <ul v-if="showObserver">
+      <li v-for="(movie, index) in movies" :key="movie.imdbID">
+        <span>{{index + 1}}</span>
+        <img v-if="movie.Poster !== 'N/A'" :src="movie.Poster" alt="" height="40">
+        <div v-else class = "no-img"></div>
+        {{ movie.Title }}
+      </li>
+    </ul>
+    <div v-show="hasTheRest && showObserver" ref="observer1"> 
+      Loading...
+    </div>
+    <div v-for="(user,index) in users" :key = "index"></div>
+  </div>
+  
+</body>
+</html>
