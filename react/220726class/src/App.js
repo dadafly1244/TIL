@@ -14,8 +14,8 @@ function App() {
       <Clock timezone="Asia/Seoul" buttonTimezone="Us/Pacific" />
       <Clock timezone="Asia/Taipei" buttonTimezone="Us/Pacific" />
       <First name="양다영" number={7}/>
-      <Intro name="양다영" age={26} email="jc1525@hanmail.net" discription="안녕하세요!" />
-      <Intro age={26} email="jc1525@hanmail.net" discription="안녕하세요!" />
+      <Intro name="양다영" age={26} email="이메일이메일@hanmail.net" discription="안녕하세요!" />
+      <Intro age={26} email="이메일이메일@hanmail.net" discription="안녕하세요!" />
     </div>
   );
 }
